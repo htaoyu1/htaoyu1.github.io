@@ -25,7 +25,7 @@
 
 - 在 `public/css/poole.css` 中添加了一下行以支持中文字体：
 
-  ~~~css
+  ```css
   h1, h2, h1 a, h2 a:lang(zh) {
   font-family: "PT Sans", "cwTeXMing", serif;
 }
@@ -35,7 +35,7 @@ h3, h4, h5, h6, p, table, img, a, ul, li:lang(zh) {
 blockquote p:lang(zh){
   font-family: "PT Sans", "STKaiti", "Kaiti", "cwTeXKai", "Microsoft YaHei", sans-serif;
 }
-~~~
+  ```
 
 - 关于代码块高亮，使用`rougify style monokai.sublime > assets/css/syntax.css` 产生高亮格式。需要注意的是，如果使用深色背景(比如本 blog 的 `monokai` 主题)，需要在产生的 `syntax.css` 里添加下面一行。
 
