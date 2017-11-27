@@ -23,7 +23,7 @@ lang: zh
 
 1. 使用 K-Means++ 算法，对整个训练集 $T$ 分为 $K$ 个聚类，记为 $C_1, C_2, \cdots, C_k$。
 
-2. 计算集簇 $i$ 之内所有样本之间的距离之和 $D_i = \sum_{x_A, x_B \in C_i} d(x_A, x_B)$
+2. 计算集簇 $i$ 内所有样本之间的距离之和 $D_i = \sum_{x_A, x_B \in C_i} d(x_A, x_B)$
 
 3. 计算所有集簇的簇间方差 $W_K = \sum_{i=1}^{K}\frac{D_i}{2N_i}$, 其中 $N_i = \vert C_i \vert$ 为第 $i$ 个集簇包含的样本个数。选取导致 $W_K$ 突降的 $K$ 值作为最优集簇个数。
 
@@ -191,7 +191,7 @@ SMOTE 算法主要存在两个方面的问题: （1）在 $k$-近邻选择时，
 
 # References
 
-1. `Cluster-Based Oversampling` M. S. Santos, P. H. Abreu, P. J. García-Laencina, A. Simão, and A. Carvalho, "[A new cluster-based oversampling method for improving survival prediction of hepatocellular carcinoma patients,]()https://doi.org/10.1016/j.jbi.2015.09.012" *Journal of Biomedical Informatics,* vol. 58, pp. 49-59, **2015.**
+1. `Cluster-Based Oversampling` M. S. Santos, P. H. Abreu, P. J. García-Laencina, A. Simão, and A. Carvalho, "[A new cluster-based oversampling method for improving survival prediction of hepatocellular carcinoma patients,](https://doi.org/10.1016/j.jbi.2015.09.012)" *Journal of Biomedical Informatics,* vol. 58, pp. 49-59, **2015.**
 
 2. `K-Means SMOTE` F. Last, G. Douzas, and F. Bacao. "[Oversampling for Imbalanced Learning Based on K-Means and SMOTE](http://adsabs.harvard.edu/abs/2017arXiv171100837L)" 	*arXiv:1711.00837*, **2017**. 
 
