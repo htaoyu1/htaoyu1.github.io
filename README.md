@@ -48,7 +48,7 @@
 
 - 关于home里帖子链接不正确，修改 `index.html` 的 `{{site.baseurl}}/{{post.url}}` 为
 
-```html
-{{site.baseurl}}{{post.url}}
-```
+  ```html
+  {{site.baseurl}}{{post.url}}
+  ```
 
