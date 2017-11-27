@@ -9,7 +9,7 @@ title:               Hongtao's Notebook
 tagline:             '云计算，大数据，机器学习'
 description:         "A learner's notebook in the area of Cloud Computing, Big Data, and Machine Learning"
 url:                 https://htaoyu1.github.io
-#baseurl:             ''
+baseurl:             ''
 paginate:            1
 
 
