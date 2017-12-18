@@ -168,7 +168,7 @@ $$
 
 # References
 
-1. *[数据挖掘导论](https://book.douban.com/subject/5377669/)*，P.-N. Tan, Steinbach, and V. Kumar 著；范明，范宏建 译， 人民邮电出版社, **2006.**
+1. [数据挖掘导论](https://book.douban.com/subject/5377669/)，P.-N. Tan, Michael Steinbach, and V. Kumar 著；范明，范宏建 译， 人民邮电出版社, **2006.**
 
 2. R. Agrawal, T. Imieliski, and A. Swami, "[Mining association rules between sets of items in large databases,](https://doi.org/10.1145/170035.170072)" in *Proceedings of the 1993 ACM SIGMOD international conference on Management of data,* Washington, D.C., USA, **1993,** pp. 207-216.
 
