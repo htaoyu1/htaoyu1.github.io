@@ -306,12 +306,6 @@ $$
 
 2. P.-N. Tan, V. Kumar, and J. Srivastava, "[Selecting the right objective measure for association analysis,](https://doi.org/10.1016/S0306-4379(03)00072-3)" *Information Systems*, vol. 29, pp. 293-313, **2004.**
 
-2. [数据挖掘：概念与技术](https://book.douban.com/subject/2038599/)，Jiawei Han, Micheline Kamber, and Jian Pei 著；范明，孟小峰 译， 机械工业出版社, **2007.**
-
-3. [Apriori导论](http://www.voidcn.com/article/p-whbfxrod-vp.html)
-
-
-4. [A Probabilistic Comparison of Commonly Used Interest Measures for Association Rules](http://michael.hahsler.net/research/association_rules/measures.html)
 
 
 
