@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 流数据聚类分析：CluStream 算法
-category: Data Mining 
+title: 流数据聚类分析(1)：DenStream 算法
+category: Machine Learning
 author: Hongtao Yu
 tags: 
-  - data-mining 
-  - association-analysis
+  - machine-learning
+  - data-streaming
 comments: true
 use_math: true
 lang: zh
@@ -47,7 +47,7 @@ lang: zh
 
 # 流数据模型
 
-流数据可以看作是一个不断增长的据集合 {$ \\{\mathbf{X}\_1, T_1 \\}, \cdots, \\{\mathbf{X}\_i, T_i \\}, \cdots$}。其中 $\mathbf{X}\_i = (x_i^1, x_i^2, \cdots, x_i^d)$  是一个 $d$ 维的数据。$t_i$ 为数据对应的时间戳, 且对任意 $i < j$ 有 $T_i < T_j$
+流数据可以看作是一个不断增长的据集合 {$ \\{\mathbf{X}\_1, T_1 \\}, \cdots, \\{\mathbf{X}\_i, T_i \\}, \cdots$}。其中 $\mathbf{X}\_i = (x_i^1, x_i^2, \cdots, x_i^d)$  是一个 $d$ 维的数据。$T_i$ 为数据对应的时间戳, 且对任意 $i < j$ 有 $T_i < T_j$
 
 对流数据的挖掘通常基于某种特定的时间区间（又叫窗口）进行。按照数据流里数据的重要程度，可以将流数据划分为三种不同的子模型，分别为：界标窗口模型（landmark window model）、滑动窗口模型（sliding window model）、以及衰减窗口模型（damped window model）。
 
