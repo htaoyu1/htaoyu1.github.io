@@ -48,7 +48,7 @@ $$
 
 即所有其他局部密度比 $p_i$ 高的数据点离 $p_i$ 的最短距离。假设 $p_j$ 是离 $p_i$ 最近的局部密度高于 $p_i$ 的数据点，那么我们就称 $p_i$ 依赖于 $p_j$。
 
-![4-1 DPCluster 聚类算法](/assets/blog-images/Streaming-Data-Analysis-4-1.png)
+![4-1 DPCluster 聚类算法](/assets/blog-images/Streaming-Data-Analysis-4.1.png)
 **Fig. 4-1.** DPCluster 聚类算法。 
 
 
@@ -78,7 +78,7 @@ $$
 
 上面的讨论我们可以看到，DP 的聚类过程可以通过追踪依赖链（dependency chain）达到。为了使用 DPCluster 算法实现流数据聚类，我们需要一个有效的数据结构来维护数据点之间的依赖关系。由于每个数据点只依赖于其他一个数据点（依赖根除外），因此可以使用树结构来维护依赖关系。这个树就被称为依赖树（DP-Tree）。下图显示了 **Fig 4-1** 中数据点的依赖树。
 
-![4-2 依赖树](/assets/blog-images/Streaming-Data-Analysis-4-2.png)
+![4-2 依赖树](/assets/blog-images/Streaming-Data-Analysis-4.2.png)
 **Fig. 4-2.** 依赖树。 
 
 **Fig. 4-2** 可以看到，树的下方局部密度低于 $\xi$ 的部分为离群点。数据点 10 弱依赖于 5。我们定义，如果一个子树 $T_i$ 内所有的数据点都是强依赖的，那么我们称 $T_i$ 为一个`强依赖子树`（strongly dependent subtree）。如果 $T_i$ 不是其他任何强依赖子树的子树，那么我们称 $T_i$ 为一个`最大强依赖子树`（Maximal, Strongly Dependent SubTree, `MSDSubTree`）。例如 **Fig. 4-2** 中包含所有蓝色数据点的子树就是一个最大强依赖子树。所有包含红色数据点的子树是另一个最大强依赖子树。
@@ -89,7 +89,7 @@ $$
 
 DBSCAN 定义的簇满足两个标准：*最大性*和*连通性*。DP 聚类定义的簇满足*最大性*和*可追溯性*。这两类算法都描述了两个数据点之间的可达（reachable）性质，数据点的可达性质依赖于数据点的密度信息。然而 DBSCAN 算法的连通性描述的是密度连通的性质，是*对称的*；而 DP 算法的可追溯性描述的是密度依赖的性质，是*非对称的*。因此 DBSCAN 的密度连通关系可以抽象成一个无向图，图的每一个连通部分可以看成一个基本的簇；而 DP 的密度依赖关系可以抽象成一个树状结构（DP-Tree），每一个 MSDSubTree 可以看作一个簇。DP 聚类算法就是在 DB-Tree 中找 MSDSubTree 的问题。**Fig. 4-3** 显示了 DBSCAN 与 DP 算法的不同点。
 
-![4-3 DBSCAN vs. DP](/assets/blog-images/Streaming-Data-Analysis-4-3.png)
+![4-3 DBSCAN vs. DP](/assets/blog-images/Streaming-Data-Analysis-4.3.png)
 **Fig. 4-3.** DBSCAN vs DP。
 
 # 问题陈述
@@ -131,7 +131,7 @@ $$
 
 簇是连续演化的，即 $\mathcal{C}^{t_n} (S^n, \mathcal{D}^{t_n}(S^n)) \neq \mathcal{C}^{t_{n+1}} (S^{n+1}, \mathcal{D}^{t_{n+1}}(S^{n+1}))$。即簇的个数，每个数据点的簇标签都有可能变化，下图显示了簇的五种演化类型。
 
-![4-4 簇的演化类型](/assets/blog-images/Streaming-Data-Analysis-4-4.png)
+![4-4 簇的演化类型](/assets/blog-images/Streaming-Data-Analysis-4.4.png)
 **Fig. 4-4.** 簇的演化类型。
 
 emerge 意味着新簇的出生，disapper 代表着旧簇的消亡，split 表示簇的分裂，merge 意味着簇的合并，adjust 表示簇的调整，意味着（1）一些数据点从一个簇迁移到另一个簇；（2）一些离群点变成可达点并被一些簇吸收；（3）簇内的一些边缘点演化成离群点。 
@@ -181,7 +181,7 @@ emerge 意味着新簇的出生，disapper 代表着旧簇的消亡，split 表�
 
 ## 算法概述
 
-![4-5 EDMStream 算法概述](/assets/blog-images/Streaming-Data-Analysis-4-5.png)
+![4-5 EDMStream 算法概述](/assets/blog-images/Streaming-Data-Analysis-4.5.png)
 **Fig. 4-5.** EDMStream 算法概述。
 
 ### 存储结构
