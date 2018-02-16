@@ -247,7 +247,7 @@ $$
 
 # Mass-Based Formalism
 
-令 $x_i = (x_i^1, \cdots, x^u_i]$， $x_i \in D$; $z_i = (z_i^1, \cdots, z_i^t)$, $z_i \in D'$。拟议的公式由下面三部分组成：
+令 $x_i = (x_i^1, \cdots, x^u_i)$， $x_i \in D$; $z_i = (z_i^1, \cdots, z_i^t)$, $z_i \in D'$。拟议的公式由下面三部分组成：
 
 - **C1：** 第一步，构建一系列质量分布。 在 **定义 5** 中给出了一个质量分布 $mass(x^d, x \vert \mathcal{D})$ 的估计方式，我们可以从数据集 $D$ 中随机选取一个子集 $\mathcal{D}_k$，然后随机从 $u$ 个维度中随机选取一个维度 $d$，得到对 $\mathcal{D}_k$ 的第 $d$ 维的质量分布的一个估计。重复这个过程 $t$ 次，我们生成 $t$ 个质量分布，形成 $\widetilde{\mathbf{mass}}(\mathbf{x}) \to \mathcal{R}^t$ 的一个映射，其中  $t \gg u$ （**算法 1**）。
 
